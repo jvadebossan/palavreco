@@ -1,14 +1,23 @@
 {
     "colors":{
-        "background":"#101010",
+        "primarycolor": "#191919",
+        "background":"#1F1F1F",
         "text":"#FDFDFD",
         "subtext":"#DDDDDD",
-        "correct":"#57F287",
+        "correct":"#1CF27E",
         "wrong":"#ED4245",
-        "almost":"#FEE75C"
+        "almost":"#F2BD00"
     },
     "fonts":{
         "logo":"",
         "deafault" : ""
+    },
+    "style":{
+        "page":{
+            "padding": "20px"
+        },
+        "header":{
+            "height": "80px"
+        }
     }
 }
