@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import config from 'config.json'
 
-import SVG from 'public/src/assets/palavreco.svg'
-import Image from 'next/image'
+import Logo from "@/components/Logo"
 
 import { IoPersonCircleOutline } from "react-icons/io5";
 
@@ -13,13 +12,24 @@ const HeaderBg = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: ${config.colors.text}
+    color: ${config.colors.text};
+
+    @media (max-width: 700px){
+        justify-content:space-between;
+        padding: ${config.style.page.padding}
+    }
+
 `;
 
 const Icons = styled.div`
     display: flex;
     position: absolute;
-    left: ${config.style.page.padding}
+    right: ${config.style.page.padding};
+
+    @media (max-width: 700px){
+        position:relative;
+        right:unset;
+    }
 `
 
 const StyledIcon = styled.button`
@@ -32,6 +42,10 @@ const StyledIcon = styled.button`
 
     & > svg{
         height: 100%;
+    }
+
+    &:last-child{
+        margin-right: 0px;
     }
 `
 
@@ -46,11 +60,10 @@ const Icon = ({src:CustomIcon, ...props})=>{
 const Header = () => {
     return(
         <HeaderBg>
+            <Logo/>
             <Icons>
                 <Icon src={IoPersonCircleOutline}/>
             </Icons>
-                
-            <Image src={SVG} width={300}/>
         </HeaderBg>
     )
 }

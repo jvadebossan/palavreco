@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
             <GlobalStyle/>
             <Component {...pageProps} />
         </Layout>
+        
     )
 }
 
